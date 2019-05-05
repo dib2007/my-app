@@ -1,0 +1,31 @@
+<div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-table"></i>
+          Metrics Go here</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Command</th>
+                        <th>Output</th>
+                        <th>Created By</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+            </thead>
+              <tbody>
+                <tr *ngFor="let metric of metrics">
+                  <td>{{metric.name}}</td>
+                  <td>{{metric.command}}</td>
+                  <td>{{metric.output}}</td>
+                  <td>{{metric.createdBy}}</td>
+                  <td><input type="button" routerLink="/{{metric.name}}" value="Edit"/></td>
+                  <td><input type="button" value="Delete"/></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
