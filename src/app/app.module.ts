@@ -8,13 +8,17 @@ import { ServersComponent } from './components/servers.component';
 import { MetricService } from './services/MetricService';
 import { HttpClientModule } from '@angular/common/http';
 import { NewMetricsComponent } from './components/new-metric.component';
+import { UpdateMetricComponent } from './components/update-metric.component';
+import { NewServerComponent } from './components/new-server.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MetricsComponent,
     ServersComponent,
-    NewMetricsComponent
+    NewMetricsComponent,
+    UpdateMetricComponent,
+    NewServerComponent
   ],
   imports: [
     BrowserModule,

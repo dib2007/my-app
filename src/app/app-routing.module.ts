@@ -4,6 +4,7 @@ import { MetricsComponent } from './components/metrics.component';
 import { ServersComponent } from './components/servers.component';
 import { MetricService } from './services/MetricService';
 import { NewMetricsComponent } from './components/new-metric.component';
+import { NewServerComponent } from './components/new-server.component';
 
 const routes: Routes = [{
   path: 'metrics',
@@ -20,7 +21,11 @@ const routes: Routes = [{
 },{
   path: 'metrics/:name',
   component: NewMetricsComponent
-}];
+},{
+  path: 'new-server',
+  component: NewServerComponent
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
