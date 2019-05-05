@@ -8,20 +8,22 @@
         <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Command</th>
-                    <th>Output</th>
-                    <th>Created By</th>
+                    <th>IP</th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>Status</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
         </thead>
           <tbody>
-            <tr *ngFor="let metric of metrics">
-              <td>{{metric.name}}</td>
-              <td>{{metric.command}}</td>
-              <td>{{metric.output}}</td>
-              <td>{{metric.createdBy}}</td>
-              <td><input type="button" routerLink="/{{metric.name}}" value="Edit"/></td>
+            <tr *ngFor="let server of servers">
+              <td><a routerLink="/metrics" > {{server.name}}</a></td>
+              <td>{{server.ip}}</td>
+              <td>{{server.uName}}</td>
+              <td>{{server.pass}}</td>
+              <td>{{server.status}}</td>
+              <td><input type="button" routerLink="/servers/{{server.name}}" value="Edit"/></td>
               <td><input type="button" value="Delete"/></td>
             </tr>
           </tbody>

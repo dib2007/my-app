@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewMetricsComponent } from './components/new-metric.component';
 import { UpdateMetricComponent } from './components/update-metric.component';
 import { NewServerComponent } from './components/new-server.component';
+import { ServerService } from './services/ServerService';
+import { UpdateServerComponent } from './components/update-server.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,15 @@ import { NewServerComponent } from './components/new-server.component';
     ServersComponent,
     NewMetricsComponent,
     UpdateMetricComponent,
-    NewServerComponent
+    NewServerComponent,
+    UpdateServerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [MetricService],
+  providers: [MetricService,ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
