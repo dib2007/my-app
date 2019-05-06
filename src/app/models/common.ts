@@ -3,7 +3,6 @@ export interface Metric{
     command : string,
     output : string,
     createdBy : string,
-    updatedBy : string,
     lastUpdate : string
 }
 
