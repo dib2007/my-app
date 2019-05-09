@@ -7,7 +7,7 @@
           <div class="form-row">
             <div class="col-md-6">
               <div class="form-label-group">
-                <input type="text" id="metricName" class="form-control" placeholder="Metric Name" required="required" autofocus="autofocus">
+                <input type="text" value="{{metric.name}}" id="metricName" class="form-control" placeholder="Metric Name" required="required" autofocus="autofocus">
                 <label for="metricName">Metric Name</label>
               </div>
             </div>
@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
           <div class="form-label-group">
-            <input type="text" id="command" class="form-control" placeholder="Command" required="required">
+            <input type="text" id="command" value="{{metric.command}}" class="form-control" placeholder="Command" required="required">
             <label for="command">Command</label>
           </div>
         </div>
@@ -23,7 +23,7 @@
           <div class="form-row">
             <div class="col-md-12">
               <div class="form-label-group">
-                <input type="text" id="output" class="form-control" placeholder="Output" required="required">
+                <input type="text" value="{{metric.output}}" id="output" class="form-control" placeholder="Output" required="required">
                 <label for="output">Output</label>
               </div>
             </div>
