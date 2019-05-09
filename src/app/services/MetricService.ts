@@ -24,7 +24,8 @@ constructor(private http:HttpClient, private router: Router){}
                     output : 'SOME REGEX',
                     createdBy : 'Dibyendu',
                     updatedBy : 'Dibyendu',
-                    lastUpdateTime: '2013-11-11'
+                    lastUpdateTime: '2013-11-11',
+                    status: 'Red'
                 },
                 {
                     name : 'TEST METRIC2',
@@ -32,7 +33,8 @@ constructor(private http:HttpClient, private router: Router){}
                     output : 'SOME REGEX',
                     createdBy : 'Dibyendu',
                     updatedBy : 'Dibyendu',
-                    lastUpdateTime: '2013-11-11'
+                    lastUpdateTime: '2013-11-11',
+                    status: 'Green'
                 }
             ]
         }

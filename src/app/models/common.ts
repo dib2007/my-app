@@ -4,12 +4,16 @@ export interface Metric{
     output : string,
     createdBy : string,
     lastUpdate : string
+    updatedBy : string,
+    status : string
 }
 
 export interface Server {
+    name: string,
     ip : string,
     uName : string,
     pass : string,
+    status : string,
     metrics: Metric[]
 }
 

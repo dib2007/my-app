@@ -1,1 +1,33 @@
-<h1>Servers go here</h1>
+<div class="card mb-3">
+    <div class="card-header">
+      <i class="fas fa-table"></i>
+      Servers Go here</div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>IP</th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let server of servers">
+              <td><a routerLink="/metrics" > {{server.name}}</a></td>
+              <td>{{server.ip}}</td>
+              <td>{{server.uName}}</td>
+              <td>{{server.pass}}</td>
+              <td>{{server.status}}</td>
+              <td><input type="button" routerLink="/servers/{{server.name}}" value="Edit"/></td>
+              <td><input type="button" value="Delete"/></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
