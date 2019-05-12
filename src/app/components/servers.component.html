@@ -20,11 +20,11 @@
             <tr *ngFor="let server of servers">
               <td><a routerLink="/metrics" > {{server.name}}</a></td>
               <td>{{server.ip}}</td>
-              <td>{{server.uName}}</td>
-              <td>{{server.pass}}</td>
+              <td>{{server.username}}</td>
+              <td>{{server.password}}</td>
               <td>{{server.status}}</td>
               <td><input type="button" routerLink="/servers/{{server.name}}" value="Edit"/></td>
-              <td><input type="button" value="Delete"/></td>
+              <td><input type="button" value="Delete" (click)="deleteServer(server.name)"/></td>
             </tr>
           </tbody>
         </table>

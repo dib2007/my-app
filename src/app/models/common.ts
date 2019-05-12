@@ -1,21 +1,25 @@
-export interface Metric{
-    name : string,
-    command : string,
-    output : string,
-    createdBy : string,
-    lastUpdate : string
-    updatedBy : string,
-    status : string
+export interface Metric {
+    id?: number
+    name?: string,
+    command?: string,
+    output?: string,
+    createdby?: string,
+    lastUpdate?: string
+    lastupdatetime?: string,
+    laststatus?: string
 }
 
 export interface Server {
     name: string,
-    ip : string,
-    uName : string,
-    pass : string,
-    status : string,
-    metrics: Metric[]
+    ip: string,
+    username: string,
+    password: string,
+    status?: string,
+    metrics?: Metric[]
 }
+
+export var PORT = 8409
+export var domain = "http://localhost"
 
 export interface Response {
     error: object;

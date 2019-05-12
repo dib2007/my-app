@@ -8,31 +8,41 @@ import { NewServerComponent } from './components/new-server.component';
 import { ServerService } from './services/ServerService';
 import { UpdateMetricComponent } from './components/update-metric.component';
 import { UpdateServerComponent } from './components/update-server.component';
+import { ServerMetricResolver } from './resolvers/server-matrics.resolver';
 
 const routes: Routes = [{
   path: 'metrics',
   component: MetricsComponent,
   resolve: {
-    metrics : MetricService
+    metrics: MetricService
   }
-},{
+}, {
   path: 'servers',
   component: ServersComponent,
   resolve: {
-    servers : ServerService
+    sm: ServerService
   }
-},{
+}, {
   path: 'new-metric',
   component: NewMetricsComponent
-},{
+}, {
   path: 'metrics/:name',
   component: UpdateMetricComponent
-},{
+}, {
   path: 'new-server',
-  component: NewServerComponent
-},{
+  component: NewServerComponent,
+  resolve: {
+    "metrics": MetricService
+  }
+}, {
   path: 'servers/:name',
   component: UpdateServerComponent
+}, {
+  path: 'servers/:sName/metrics',
+  component: MetricsComponent,
+  resolve: {
+    "metrics": ServerMetricResolver
+  }
 }
 ];
 

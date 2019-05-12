@@ -12,6 +12,7 @@ import { UpdateMetricComponent } from './components/update-metric.component';
 import { NewServerComponent } from './components/new-server.component';
 import { ServerService } from './services/ServerService';
 import { UpdateServerComponent } from './components/update-server.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { UpdateServerComponent } from './components/update-server.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [MetricService,ServerService],
   bootstrap: [AppComponent]

@@ -2,12 +2,12 @@
   <div class="card card-register mx-auto mt-5">
     <div class="card-header">Create Server</div>
     <div class="card-body">
-      <form>
+      <form [formGroup]="newServerForm" (submit)="onSubmit()">
         <div class="form-group">
           <div class="form-row">
             <div class="col-md-6">
               <div class="form-label-group">
-                <input type="text" id="serverName" class="form-control" placeholder="Server Name" required="required" autofocus="autofocus">
+                <input type="text" id="serverName" class="form-control" placeholder="Server Name" formControlName="name">
                 <label for="serverName">Server Name</label>
               </div>
             </div>
@@ -15,19 +15,19 @@
         </div>
         <div class="form-group">
           <div class="form-label-group">
-            <input type="text" id="serverIp" class="form-control" placeholder="serverIp" required="required">
+            <input type="text" id="serverIp" class="form-control" placeholder="serverIp" required="required" formControlName="ip">
             <label for="serverIp">IP</label>
           </div>
         </div>
         <div class="form-group">
           <div class="form-label-group">
-            <input type="text" id="username" class="form-control" placeholder="username" required="required">
+            <input type="text" id="username" class="form-control" placeholder="username" required="required" formControlName="uName">
             <label for="username">User Name</label>
           </div>
         </div>
         <div class="form-group">
           <div class="form-label-group">
-            <input type="text" id="pwd" class="form-control" placeholder="pwd" required="required">
+            <input type="text" id="pwd" class="form-control" placeholder="pwd" required="required" formControlName="password">
             <label for="pwd">Password</label>
           </div>
         </div>
@@ -35,19 +35,15 @@
           <div class="form-row">
             <div class="col-md-12">
               <div class="form-label-group">
-                <select class="mdb-select md-form" multiple>
+                <select class="mdb-select md-form" multiple formControlName="metrics">
                   <option value="" disabled selected>----Choose Metric----</option>
-                  <option value="1">Metric 1</option>
-                  <option value="2">Metric 2</option>
-                  <option value="3">Metric 3</option>
-                  <option value="4">Metric 4</option>
-                  <option value="5">Metric 5</option>
+                  <option *ngFor="let m of metrics" value="{{m.id}}">{{m.name}}</option>
                 </select>
               </div>
             </div>
           </div>
         </div>
-        <a class="btn btn-primary btn-block" href="#">Create</a>
+        <button class="btn btn-primary btn-block" type="submit">Create</button>
       </form>
     </div>
   </div>
