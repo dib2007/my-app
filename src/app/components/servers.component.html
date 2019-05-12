@@ -18,7 +18,7 @@
         </thead>
           <tbody>
             <tr *ngFor="let server of servers">
-              <td><a routerLink="/metrics" > {{server.name}}</a></td>
+              <td><a routerLink="/servers/{{server.name}}/metrics/" > {{server.name}}</a></td>
               <td>{{server.ip}}</td>
               <td>{{server.username}}</td>
               <td>{{server.password}}</td>

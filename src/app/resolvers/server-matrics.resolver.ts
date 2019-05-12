@@ -11,7 +11,9 @@ export class ServerMetricResolver implements Resolve<Observable<any>>{
     }
 
     resolve(route: ActivatedRouteSnapshot): Observable<any> {
-        return this.serverService.getServerMetrics(route.params.server).pipe(
+        let serverName = route.params.sName
+        console.log("Getting metrics for server ", serverName)
+        return this.serverService.getServerMetrics(serverName).pipe(
             catchError(err => {
                 console.log(err)
                 return EMPTY;

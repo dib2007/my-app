@@ -13,6 +13,7 @@ import { NewServerComponent } from './components/new-server.component';
 import { ServerService } from './services/ServerService';
 import { UpdateServerComponent } from './components/update-server.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ServerMetricResolver } from './resolvers/server-matrics.resolver';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [MetricService,ServerService],
+  providers: [MetricService, ServerService, ServerMetricResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

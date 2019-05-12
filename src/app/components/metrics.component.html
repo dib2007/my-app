@@ -11,6 +11,7 @@
                         <th>Command</th>
                         <th>Output</th>
                         <th>Created By</th>
+                        <th>Status</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -21,6 +22,7 @@
                   <td>{{metric.command}}</td>
                   <td>{{metric.output}}</td>
                   <td>{{metric.createdby}}</td>
+                  <td>{{metric.laststatus}}</td>
                   <td><input type="button" routerLink="/metrics/{{metric.name}}" value="Edit"/></td>
                   <td><input type="button" value="Delete" (click)="delete(metric.name)"/></td>
                 </tr>
